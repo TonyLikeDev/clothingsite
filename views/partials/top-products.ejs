@@ -1,0 +1,15 @@
+<div class="beta-products-list">
+	<h4>Top Products</h4>
+	<div class="beta-products-details">
+		<p class="pull-left"><%= products.length %> styles found</p>
+		<div class="clearfix"></div>
+	</div>
+	<% for (let i = 0; i < products.length; i += 4) { %>
+	<div class="row">
+		<% products.slice(i, i + 4).forEach(product => { %>
+			<%- include('product-card', { product }) %>
+		<% }) %>
+	</div>
+	<% if (i + 4 < products.length) { %><div class="space40">&nbsp;</div><% } %>
+	<% } %>
+</div> <!-- .beta-products-list -->
