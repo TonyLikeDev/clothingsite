@@ -4,7 +4,7 @@ const path = require('path');
 const pageRoutes = require('./routes/pageRoutes');
 
 const app = express();
-const PORT = 5714;
+const PORT = 5174;
 
 // Kích hoạt public
 app.use(express.static(path.join(__dirname, 'public')));
