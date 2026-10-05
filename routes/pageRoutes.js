@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const pageController = require('../controllers/pageController');
+const sanphamController = require('../controllers/sanphamController');
 
 // Route để hiển thị trang chủ
-router.get('/', pageController.home);
+router.get('/', sanphamController.getHomePage);
 
 // Route để hiển thị trang giới thiệu
 router.get('/about', pageController.about);
